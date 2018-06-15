@@ -1,0 +1,27 @@
+{
+  "name": "iexamassignment",
+  "version": "1.0.0",
+  "description": "Mean Stack authentication app with Socket IO for Exam Assignment june 2018",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/socket.io": "^1.4.34",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "morgan": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "socket.io": "*"
+  },
+  "author": "MunirYounosi",
+  "license": "ISC"
+}

@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="top" *ngIf="user">
+        <h2 class="display-6"><strong>You are logged in as: </strong>{{user.username}}</h2>
+          <table class="table table-hover">
+              <thead>
+                <tr class="table-info">
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">User Name</th>
+                  <th scope="col">Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-success">
+                  <th scope="row">{{user.firstname}}</th>
+                  <td>{{user.lastname}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.email}}</td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
+    </div>
+  </div>
+</div>

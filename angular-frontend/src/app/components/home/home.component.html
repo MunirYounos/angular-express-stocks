@@ -1,0 +1,46 @@
+<div class="bs-component">
+    <div class="jumbotron">
+     <div class="container">
+      <h2 class="display-4">Wellcome to Stock Exchange Market</h2>
+      <p class="lead">This Application is provided to make it easier for you as business person. So you can buy and sell you shares.</p>
+      <hr class="my-4">
+      <p>Only shareholders can add stocks, add them or sell them. Please Register to do so or login with a valid User account.</p>
+      <div>
+        <a class="btn btn-primary btn-md" [routerLink]="['/login']"role="button">Login</a>
+        <a class="btn btn-success btn-md" [routerLink]="['/register']"role="button">Register</a>
+        <a class="btn btn-danger btn-md" [routerLink]="['/stocks']"role="button">Add Stocks</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+       
+      <h2>All Available Stocks </h2>
+      <table class="table table-hover">
+          <thead>
+                <tr class="table-info">
+                  <th scope="col">Share Holder</th>
+                  <th scope="col">Stock Name</th>
+                  <th scope="col">Shares</th>
+                  <th scope="col">Profit %</th>
+                  <th scope="col">Price + / -</th>
+                  <th scope="col">Date</th>
+                </tr>
+          </thead>
+              <tbody>
+                  <tr class="table-success" *ngFor="let stocks of stockMessages">
+                     <td>{{stocks.username | uppercase}}</td>
+                    <td>{{stocks.stockName | uppercase }}</td>
+                    <td>{{stocks.body}}</td>
+                    <td>{{stocks.profit}}</td>
+                    <td>{{stocks.price}}</td>
+                    <td>{{stocks.date |  date:'dd MM yy HH:mm:ss'}}</td>
+                  </tr>
+                </tbody>
+        </table> 
+    </div>
+  </div>
+</div>

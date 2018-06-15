@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+    <h2 class="display-4">Register</h2>
+    <form (submit)="onRegisterSubmit()">
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="firstname"  name="firstname" placeholder="First Name">
+            <small id="emailHelp" class="form-text text-muted">This field is requied.</small>
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]="lastname" name="lastname" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="username"  name="username" placeholder="User Name">
+                <small id="emailHelp" class="form-text text-muted">This field is requied.</small>
+              </div>
+              <div class="form-group">
+                  <input type="email" class="form-control" [(ngModel)]="email"  name="email" placeholder="email@example.com">
+                  <small id="emailHelp" class="form-text text-muted">This field is requied.</small>
+                </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" [(ngModel)]="password"  placeholder="Password">
+          </div>
+         
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+</div>
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class=" top display-4">{{title}}</h2>
+
+        <hr>
+        
+        <h2 class="display-6">Add new stocks</h2>
+        <form (ngSubmit)="submitStock()">
+
+          <div class="form-group">
+            <input type="text"  class="form-control" id="stockName"
+            required
+            [(ngModel)]="model.stockName" name="stockName" placeholder="Stock name EX Gold">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="body"
+                   required
+                   [(ngModel)]="model.body" name="body" placeholder="Shares add numbers">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="body"
+                   required
+                   [(ngModel)]="model.profit" name="profit" placeholder="Profit in %">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="body" required
+                   [(ngModel)]="model.price" name="price" placeholder="Price">
+          </div>
+          <div class="form-group">
+            <label for="username">Select your Username</label>
+          <select class="custom-select" [(ngModel)]="model.username" name="{{user.username}}" value="{{user.username}}" id="exampleSelect1">
+              <option disabled selected>Select your Name</option>
+                <option selected="selected" value="{{user.username}}">{{user.username}}</option>
+          </select>
+            </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <hr>
+        <h2>All Stocks</h2>
+        <table class="table table-hover">
+            <thead>
+                  <tr class="table-info">
+                    <th scope="col">Share Holder</th>
+                    <th scope="col">Stock Name</th>
+                    <th scope="col">shares</th>
+                    <th scope="col">Profit %</th>
+                    <th scope="col">Price + / -</th>
+                    <th scope="col">Date</th>
+                  </tr>
+            </thead>
+            <tbody>
+              <tr class="table-success" *ngFor="let stocks of stockMessages">
+                  <td>{{stocks.username | uppercase}}</td>
+                  <td>{{stocks.stockName | uppercase }}</td>
+                <td>{{stocks.body}}</td>
+                <td>{{stocks.profit}}</td>
+                <td>{{stocks.price}}</td>
+                <td>{{stocks.date |  date:'dd MM yy HH:mm:ss'}}</td>
+              </tr>
+            </tbody>
+        </table> 
+    </div>
+  </div>
+</div>
+
